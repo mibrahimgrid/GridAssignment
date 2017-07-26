@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.Assignment1Hibernate.Hibernate.Sample">
+	<class name="Address" table="ADDRESS">
+		<id name="id" type="int" column="ID"></id>
+		<property name="streetAddress" type="string" column="STREETADDRESS"/>
+		<property name="city" type="string" column="CITY"/>
+		<property name="province" type="string" column="PROVINCE"/>
+		<property name="country" type="string" column="COUNTRY"></property>
+	</class>
+</hibernate-mapping>

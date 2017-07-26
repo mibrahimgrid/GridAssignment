@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.Assignment1Hibernate.Hibernate.Sample">
+	<class name="Contact" table="CONTACT">
+		<id name="id" type="int">
+			<column name="ID"></column>
+			<generator class="identity"/>
+		</id>
+		<property name="firstName" type="string">
+			<column name="FIRSTNAME"></column>
+		</property>
+		<property name="lastName" type="string">
+			<column name="LASTNAME"></column>
+		</property>
+		<property name="emailAddress" type="string">
+			<column name="EMAILADDRESS"></column>
+		</property>
+		<property name="gender" type="string">
+			<column name="GENDER"></column>
+		</property>
+		<property name="phoneNumber" type="string">
+			<column name="PHONENUMBER"></column>
+		</property>
+		<property name="status" type="boolean">
+			<column name="STATUS"></column>
+		</property>
+		<many-to-one name="account" class="Account">
+			<column name="ACCOUNT_ID" unique="false" not-null="false"></column>
+		</many-to-one>
+		<many-to-one name="address" class="Address">
+			<column name="ADDRESS_ID" unique="false"></column>
+		</many-to-one>
+	</class>
+</hibernate-mapping>
